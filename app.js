@@ -84,7 +84,7 @@ mongoose.connect(MONGO_URI)
  *       400:
  *         description: Error al registrar alumno
  */
-app.post('/alumno', async (req, res) => {
+app.post('/alumnos', async (req, res) => {
   try {
     const nuevoAlumno = new Alumno(req.body);
     await nuevoAlumno.save();
@@ -104,7 +104,7 @@ app.post('/alumno', async (req, res) => {
  *          400:
  *              description: Error al listar
  */
-app.get('/alumno', async (req, res) => {
+app.get('/alumnos', async (req, res) => {
   try {
     const listadoAlumno = await Alumno.find();
     res.status(200).json(listadoAlumno);
