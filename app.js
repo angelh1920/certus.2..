@@ -15,7 +15,12 @@ const swaggerOption ={
             description:'API para gestionar los alumnos'
         },
         servers:[
-            {
+            {  
+                url:'https://certus2-production-f391.up.railway.app'
+            
+              }, 
+              {
+              
                 url:'http://localhost:5000'
             }
         ]
